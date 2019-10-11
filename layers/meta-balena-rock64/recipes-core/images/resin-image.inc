@@ -27,7 +27,8 @@ RESIN_BOOT_PARTITION_FILES_append = " \
 
 # we need some space before in order to write the boot binaries, as per http://rockchip.wikidot.com/partitions
 # (we do not use GPT though and we only write idbloader.bin, u-boot.img and trust.img as opposed to the above wiki)
-# DEVICE_SPECIFIC_SPACE = "20480"
+DEVICE_SPECIFIC_SPACE = "16384"
+RESIN_BOOT_SIZE = "114688"
 
 # IMAGE_FEATURES += "ssh-server-dropbear"
 
