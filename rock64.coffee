@@ -1,12 +1,6 @@
 deviceTypesCommon = require '@resin.io/device-types/common'
 { networkOptions, commonImg, instructions } = deviceTypesCommon
 
-postProvisioningInstructions = [
-	instructions.BOARD_SHUTDOWN
-	instructions.REMOVE_INSTALL_MEDIA
-	instructions.BOARD_REPOWER
-]
-
 module.exports =
 	version: 1
 	slug: 'rock64'
@@ -14,15 +8,8 @@ module.exports =
 	arch: 'aarch64'
 	state: 'experimental'
 
-	stateInstructions:
-		postProvisioning: postProvisioningInstructions
-
-	instructions: [
-		instructions.ETCHER_SD
-		instructions.EJECT_SD
-		instructions.FLASHER_WARNING
-	].concat(postProvisioningInstructions)
-
+	instructions: commonImg.instructions
+	
 	gettingStartedLink:
 		windows: 'https://docs.balena.io/rock64/nodejs/getting-started/#adding-your-first-device'
 		osx: 'https://docs.balena.io/rock64/nodejs/getting-started/#adding-your-first-device'
@@ -32,10 +19,10 @@ module.exports =
 
 	yocto:
 		machine: 'rock64'
-		image: 'resin-image-flasher'
+		image: 'resin-image'
 		fstype: 'resinos-img'
 		version: 'yocto-thud'
-		deployArtifact: 'resin-image-flasher-rock64.resinos-img'
+		deployArtifact: 'resin-image-rock64.resinos-img'
 		compressed: true
 
 	options: [ networkOptions.group ]
