@@ -1,4 +1,4 @@
-#BALENA_BOOT_FAT32 = "1"
+BALENA_BOOT_FAT32 = "1"
 
 IMAGE_FSTYPES_append = " resinos-img"
 
@@ -22,7 +22,7 @@ RESIN_BOOT_PARTITION_FILES_append = " \
     ${DEPLOY_DIR_IMAGE}/idbloader.img:/idbloader.img \
 "
 # Asus tinker expects the kernel and dtbs on rootfs
-# IMAGE_INSTALL_append = " kernel-image-initramfs kernel-devicetree"
+IMAGE_INSTALL_append = " kernel-image-initramfs kernel-devicetree"
 # IMAGE_INSTALL_append = " kernel-image-initramfs"
 
 # we need some space before in order to write the boot binaries, as per http://rockchip.wikidot.com/partitions
