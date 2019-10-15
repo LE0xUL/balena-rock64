@@ -5,5 +5,5 @@ do_install_append(){
     # "dw_wdt: keepalive missed, machine will reset"
     # and the machine will reset; to work around this we disable systemd watchdog feature
     #
-    # echo "" > ${D}/${sysconfdir}/systemd/system.conf.d/watchdog.conf
+    echo "" > ${D}/${sysconfdir}/systemd/system.conf.d/watchdog.conf
 }
