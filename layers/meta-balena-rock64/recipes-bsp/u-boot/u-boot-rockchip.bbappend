@@ -9,6 +9,7 @@ SRC_URI_append = " \
 	file://0001-Add-Resin-specific-boot-command.patch \
 	file://0002-rock64-board-Enable-CONFIG_CMD_SETEXPR.patch \
 	file://0003-resin-specific-env-integration-kconfig.patch \
+	file://0004-Add-rock64-recovery-support.patch \
 "
 # CONFIG_BOOTCOMMAND="setenv resin_kernel_load_addr ${kernel_addr_r}; 
 # run resin_set_kernel_root; 
