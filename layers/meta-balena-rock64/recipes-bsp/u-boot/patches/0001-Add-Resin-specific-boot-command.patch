@@ -1,3 +1,12 @@
+From 495e41d7ccf14982393b796096aa1846aaa151be Mon Sep 17 00:00:00 2001
+From: Leonardo Urrego <trecetp@gmail.com>
+Date: Fri, 27 Sep 2019 15:04:24 -0500
+Subject: [PATCH 1/4] Add-Resin-specific-boot-command
+
+---
+ include/configs/rk3328_common.h | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
 diff --git a/include/configs/rk3328_common.h b/include/configs/rk3328_common.h
 index 3ff3331c80..e7258ec8cb 100644
 --- a/include/configs/rk3328_common.h
@@ -14,8 +23,11 @@ index 3ff3331c80..e7258ec8cb 100644
 +	"setenv bootargs ${resin_kernel_root} rw rootfstype=ext4 rootwait console=tty1 console=ttyS2,1500000n8;" \
 +	"fatload ${resin_dev_type} ${resin_dev_index}:${resin_boot_part} ${resin_kernel_load_addr} Image;" \
 +	"fatload ${resin_dev_type} ${resin_dev_index}:${resin_boot_part} ${fdt_addr_r} rk3328-rock64.dtb;" \
-+	"booti ${resin_kernel_load_addr} - ${fdt_addr_r}"
++	"bootz ${resin_kernel_load_addr} - ${fdt_addr_r}"
 +
  #define CONFIG_EXTRA_ENV_SETTINGS \
  	ENV_MEM_LAYOUT_SETTINGS \
  	"fdtfile=" CONFIG_DEFAULT_FDT_FILE "\0" \
+-- 
+2.23.0
+
