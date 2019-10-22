@@ -1,0 +1,25 @@
+From 4bf2abba344a5d7524bafddc42e2c3cd5436d8d7 Mon Sep 17 00:00:00 2001
+From: Leonardo Urrego <trecetp@gmail.com>
+Date: Fri, 27 Sep 2019 15:07:47 -0500
+Subject: [PATCH 2/4] rock64-board-Enable-CONFIG_CMD_SETEXPR
+
+---
+ configs/rock64-rk3328_defconfig | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configs/rock64-rk3328_defconfig b/configs/rock64-rk3328_defconfig
+index 3ab0af1158..64eb6f5a93 100644
+--- a/configs/rock64-rk3328_defconfig
++++ b/configs/rock64-rk3328_defconfig
+@@ -31,7 +31,7 @@ CONFIG_CMD_GPT=y
+ CONFIG_CMD_MMC=y
+ CONFIG_CMD_SF=y
+ CONFIG_CMD_USB=y
+-# CONFIG_CMD_SETEXPR is not set
++CONFIG_CMD_SETEXPR=y
+ CONFIG_CMD_TIME=y
+ CONFIG_SPL_OF_CONTROL=y
+ CONFIG_TPL_OF_CONTROL=y
+-- 
+2.23.0
+
