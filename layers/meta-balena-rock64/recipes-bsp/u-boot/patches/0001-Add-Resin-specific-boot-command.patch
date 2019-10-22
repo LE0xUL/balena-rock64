@@ -20,10 +20,10 @@ index 3ff3331c80..e7258ec8cb 100644
 +#define CONFIG_BOOTCOMMAND \
 +	"setenv resin_kernel_load_addr ${kernel_addr_r};" \
 +	"run resin_set_kernel_root;" \
-+	"setenv bootargs ${resin_kernel_root} rw rootfstype=ext4 rootwait console=tty1 console=ttyS2,1500000n8;" \
-+	"fatload ${resin_dev_type} ${resin_dev_index}:${resin_boot_part} ${resin_kernel_load_addr} Image;" \
-+	"fatload ${resin_dev_type} ${resin_dev_index}:${resin_boot_part} ${fdt_addr_r} rk3328-rock64.dtb;" \
-+	"bootz ${resin_kernel_load_addr} - ${fdt_addr_r}"
++	"setenv bootargs ${resin_kernel_root} rw rootfstype=ext4 rootwait console=ttyS2,1500000n8 earlycon=uart8250,mmio32,0xff130000 panic=10 loglevel=7;" \
++	"load ${resin_dev_type} ${resin_dev_index}:${resin_boot_part} ${resin_kernel_load_addr} Image;" \
++	"load ${resin_dev_type} ${resin_dev_index}:${resin_boot_part} ${fdt_addr_r} rk3328-rock64.dtb;" \
++	"booti ${resin_kernel_load_addr} - ${fdt_addr_r}"
 +
  #define CONFIG_EXTRA_ENV_SETTINGS \
  	ENV_MEM_LAYOUT_SETTINGS \
