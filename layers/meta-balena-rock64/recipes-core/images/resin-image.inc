@@ -18,7 +18,7 @@ IMAGE_CMD_resinos-img_append () {
 
 RESIN_BOOT_PARTITION_FILES_append = " \
     Image${KERNEL_INITRAMFS}-${MACHINE}.bin:/Image \
-    rk3328-rock64.dtb:/rk3328-rock64.dtb \
+    rk3328-aistick.dtb:/rk3328-aistick.dtb \
 "
 #     ${DEPLOY_DIR_IMAGE}/idbloader.img:/idbloader.img \
 # "
