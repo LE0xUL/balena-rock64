@@ -21,7 +21,7 @@ module.exports =
 		machine: 'rock64'
 		image: 'resin-image'
 		fstype: 'resinos-img'
-		version: 'yocto-thud'
+		version: 'yocto-warrior'
 		deployArtifact: 'resin-image-rock64.resinos-img'
 		compressed: true
 

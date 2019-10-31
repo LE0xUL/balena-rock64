@@ -1,7 +1,7 @@
 # Supported machines
 #MACHINE ?= "rock64"
 
-BALENA_STORAGE = "overlay2"
+BALENA_STORAGE ?= "overlay2"
 
 # More info meta-resin/README.md
 #TARGET_REPOSITORY ?= ""
