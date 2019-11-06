@@ -13,6 +13,6 @@
 [submodule "layers/poky"]
 	path = layers/poky
 	url = https://github.com/balena-os/poky.git
-[submodule "layers/meta-rock64"]
-	path = layers/meta-rock64
+[submodule "layers/meta-aistick"]
+	path = layers/meta-aistick
 	url = https://github.com/trecetp/meta-rock64.git

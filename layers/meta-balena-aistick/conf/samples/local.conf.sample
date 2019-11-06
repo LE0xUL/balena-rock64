@@ -1,5 +1,5 @@
 # Supported machines
-#MACHINE ?= "rock64"
+#MACHINE ?= "aistick"
 
 BALENA_STORAGE ?= "overlay2"
 

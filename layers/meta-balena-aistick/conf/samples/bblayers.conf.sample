@@ -15,6 +15,6 @@ BBLAYERS ?= " \
     ${TOPDIR}/../layers/meta-balena/meta-balena-common \
     ${TOPDIR}/../layers/meta-balena/meta-balena-warrior \
     ${TOPDIR}/../layers/meta-rust \
-    ${TOPDIR}/../layers/meta-balena-rock64/ \
-    ${TOPDIR}/../layers/meta-rock64/ \
+    ${TOPDIR}/../layers/meta-balena-aistick/ \
+    ${TOPDIR}/../layers/meta-aistick/ \
     "

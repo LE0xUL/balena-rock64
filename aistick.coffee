@@ -3,8 +3,8 @@ deviceTypesCommon = require '@resin.io/device-types/common'
 
 module.exports =
 	version: 1
-	slug: 'rock64'
-	name: 'rock64'
+	slug: 'aistick'
+	name: 'aistick'
 	arch: 'aarch64'
 	state: 'experimental'
 
@@ -18,11 +18,11 @@ module.exports =
 	supportsBlink: true
 
 	yocto:
-		machine: 'rock64'
+		machine: 'aistick'
 		image: 'resin-image'
 		fstype: 'resinos-img'
 		version: 'yocto-warrior'
-		deployArtifact: 'resin-image-rock64.resinos-img'
+		deployArtifact: 'resinos-image-aistick.img'
 		compressed: true
 
 	options: [ networkOptions.group ]
