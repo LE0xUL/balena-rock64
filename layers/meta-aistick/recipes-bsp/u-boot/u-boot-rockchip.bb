@@ -28,7 +28,7 @@ S = "${WORKDIR}/git"
 # PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 # u-boot will build native python module
-# inherit pythonnative
+inherit pythonnative
 
 # Generate rockchip style u-boot binary
 # UBOOT_BINARY = "uboot.img"
